@@ -81,18 +81,29 @@ public class SecurityConfiguration {
 	}
 	
 	@Bean
-	public CorsConfigurationSource corsConfigurationSource() {
-	    CorsConfiguration configuration = new CorsConfiguration();
-	    configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://localhost:3000", "https://front-end-ebon-eight.vercel.app"));
-	    configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
-	    configuration.setAllowedHeaders(Arrays.asList("*"));
-	    configuration.setAllowCredentials(true);
-	    
-	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-	    source.registerCorsConfiguration("/**", configuration);
-	    return source;
-	}
-	
+public CorsConfigurationSource corsConfigurationSource() {
+    CorsConfiguration configuration = new CorsConfiguration();
+
+    configuration.setAllowCredentials(true);
+
+    configuration.setAllowedOriginPatterns(Arrays.asList(
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://front-end-ebon-eight.vercel.app",
+        "https://*.vercel.app"
+    ));
+
+    configuration.setAllowedMethods(Arrays.asList(
+        "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"
+    ));
+    configuration.setAllowedHeaders(Arrays.asList("*"));
+
+    UrlBasedCorsConfigurationSource source =
+            new UrlBasedCorsConfigurationSource();
+    source.registerCorsConfiguration("/**", configuration);
+
+    return source;
+}
 	
 
 	    
