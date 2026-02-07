@@ -9,7 +9,6 @@ import lombok.Setter;
 
 import java.time.LocalTime;
 
-import com.taskbuddy.entities.UserRole;
 
 @Data
 @Builder

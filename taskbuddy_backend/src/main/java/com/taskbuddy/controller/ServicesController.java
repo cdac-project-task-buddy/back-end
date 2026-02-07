@@ -4,11 +4,10 @@ import com.taskbuddy.dto.request.ServiceRequest;
 import com.taskbuddy.dto.response.ServiceDTO;
 import com.taskbuddy.service.ServicesService;
 
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;

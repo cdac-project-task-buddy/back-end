@@ -1,8 +1,7 @@
 package com.taskbuddy.dto.response;
 
 import com.taskbuddy.entities.ServiceName;
-import com.taskbuddy.entities.Status;
-import com.taskbuddy.entities.UserRole;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
