@@ -23,7 +23,7 @@ private final ServicesService servicesService;
 
 @GetMapping
 public ResponseEntity<List<ServiceDTO>> getAllServices() {
-    return ResponseEntity.status(HttpStatus.CREATED).body(servicesService.getAllServices());
+    return ResponseEntity.ok(servicesService.getAllServices());
 }
 
 @GetMapping("/{id}")
