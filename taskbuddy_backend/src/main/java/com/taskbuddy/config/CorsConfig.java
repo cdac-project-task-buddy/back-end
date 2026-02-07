@@ -7,13 +7,14 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig {
+
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                    .allowedOrigins(
+                    .allowedOriginPatterns(
                         "http://localhost:5173",
                         "https://front-end-ebon-eight.vercel.app",
                         "https://*.vercel.app"
