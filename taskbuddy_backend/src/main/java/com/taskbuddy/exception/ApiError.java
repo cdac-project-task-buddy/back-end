@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApiError {
-
+// checked
     private LocalDateTime timestamp;
     private int status;
     private String error;
